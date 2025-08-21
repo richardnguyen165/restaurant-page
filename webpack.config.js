@@ -1,0 +1,29 @@
+// webpack.config.js
+const path = require("path");
+
+module.exports = {
+  mode: "development",
+  entry: "./src/index.js",
+  output: {
+    filename: "main.js",
+    path: path.resolve(__dirname, "dist"),
+    clean: true, // for js
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/template.html", // for html
+    }),
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"], // for css
+      },
+      {
+        test: /\.html$/i,
+        loader: "html-loader",
+      } // for images loaded in html file
+    ],
+  },
+};
