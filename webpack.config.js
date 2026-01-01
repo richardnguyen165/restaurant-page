@@ -1,5 +1,6 @@
 // webpack.config.js
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: "development",
@@ -23,7 +24,11 @@ module.exports = {
       {
         test: /\.html$/i,
         loader: "html-loader",
-      } // for images loaded in html file
+      }, // for images loaded in html file
+      { 
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
+      } // for images loaded in js
     ],
   },
 };
