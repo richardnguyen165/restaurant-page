@@ -1,0 +1,61 @@
+.menu-food-section, .menu-section{
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-section{
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.menu-food-section{
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  padding: 50px;
+}
+
+.menu-food-section > p{
+  color:black;
+}
+
+.food-object-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  width: 100vw;
+}
+
+.food-object{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: black;
+}
+
+.food-object > img{
+  object-fit: cover;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+
+.food-object-container{
+  display: flex;
+}
+
+.menu-drinks, .menu-lunch-dinner{
+  background-color: #24b4ab;
+}
+
+.menu-breakfast, .menu-salads{
+  background-color: #fa8072;
+}
+
+.menu-food-title{
+  font-family: "Pacifico", cursive;
+  font-size: 35px;
+}
